@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 const Accordion = ({ items }) => {
-  const [activeIndex, setActiveindex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
 
   const onTitleClick = (index) => {
-    setActiveindex(index);
+    setActiveIndex(index);
   };
 
 
@@ -23,7 +23,7 @@ const Accordion = ({ items }) => {
           <i className="dropdown icon"></i>
           {item.title}
         </div>
-        <div className={`contect ${active}`}>
+        <div className={`content ${active}`}>
           <p>{item.content}</p>
         </div>
       </React.Fragment>
