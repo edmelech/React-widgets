@@ -7,7 +7,15 @@ const Search = () => {
 
   useEffect(() => {
     const search = async () => {
-      await axios.get('asdasd')
+      await axios.get('http://en.wikipedia.org/w/api.php', {
+        params: {
+          action: 'query',
+          list: 'search',
+          origin: '*',
+          format: 'json',
+          srsearch: term
+        }
+      })
     };
 
     search();
