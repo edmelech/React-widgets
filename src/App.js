@@ -21,28 +21,32 @@ const items = [
 const options = [
   {
     label: 'The Color Red',
-    value: 'red'
+    value: 'red',
   },
   {
     label: 'The Color Green',
-    value: 'green'
+    value: 'green',
   },
   {
     label: 'A Shade of Blue',
-    value: 'blue'
-  }
+    value: 'blue',
+  },
 ];
 
 export default () => {
   const [selected, setSelected] = useState(options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <div>
-      <Dropdown
-        selected={selected}
-        onSelectedChange={setSelected}
-        options={options}
-      />
+      <button onClick={() => setShowDropdown(!showDropdown)}>Toggole Dropdown</button>
+     {showDropdown ?
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        /> : null
+      }
     </div>
   );
 };
