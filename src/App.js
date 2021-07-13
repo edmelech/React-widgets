@@ -40,6 +40,18 @@ const showAccordion = () => {
   }
 }
 
+const showList = () => {
+  if (window.location.pathname === '/list') {
+    return <Search />;
+  }
+}
+
+const showDropdown = () => {
+  if (window.location.pathname === '/dropdown') {
+    return <Dropdown />
+  }
+}
+
 export default () => {
 
 
