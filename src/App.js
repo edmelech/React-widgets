@@ -48,7 +48,13 @@ const showList = () => {
 
 const showDropdown = () => {
   if (window.location.pathname === '/dropdown') {
-    return <Dropdown />
+    return <Dropdown />;
+  }
+}
+
+const showTranslate = () => {
+  if (window.location.pathname === '/translate') {
+    return <Translate />;
   }
 }
 
