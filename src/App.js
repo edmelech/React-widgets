@@ -59,11 +59,12 @@ const showTranslate = () => {
 }
 
 export default () => {
-
-
   return (
     <div>
       {showAccordion()}
+      {showList()}
+      {showDropdown()}
+      {showTranslate}
     </div>
   );
 };
